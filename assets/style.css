@@ -1,0 +1,146 @@
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.game_title {
+  text-align: center;
+  font-size: 3vw;
+}
+
+.used_letters_container {
+  border: 0.3vw solid black;
+
+  position: absolute;
+  left: 3vw;
+  top: 13.125vw;
+
+  width: 20vw;
+  height: 18.75vw;
+}
+
+.hang_stand {
+  border: 0.3vw solid black;
+
+  position: absolute;
+  top: 10vw;
+
+  display: flex;
+  align-items: center;
+
+  width: 45vw;
+  height: 25vw;
+}
+
+.guess_container {
+  position: absolute;
+  bottom: 8vw;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 2vw;
+}
+
+input{
+  width: 15vw;
+  height: 3vw;
+
+  border: 0.25vw solid grey;
+  border-radius: 1vw;
+  
+  text-align: center;
+  transition: 0.3s;
+
+  font-size: 1.5vw;
+}
+input:focus{
+  border-color: dodgerblue;
+  box-shadow: 0 0 0.25vw 0 dodgerblue;
+}
+
+.confirm_button {
+  position: absolute;
+  bottom: 4vw;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 1.5vw;
+  border-radius: 0.5vw;
+}
+
+.definition_container {
+  border: 0.3vw solid black;
+
+  position: absolute;
+  right: 3vw;
+  top: 10vw;
+
+  width: 20vw;
+  height: 10vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .definition_container > h2 {
+    position: absolute;
+    left: 0.5vw;
+    top: -1vw;
+    
+    font-size: 1.5vw;
+  }
+  .definition_container > p {
+    font-size: 1.25vw;
+    text-align: center;
+  }
+
+.score_container, .new_word {
+  position: absolute;
+  border: 0.3vw solid black;
+  width: 9.5vw;
+  height: 9.5vw;
+  
+  top: 21vw;
+  right: 3vw;
+}
+
+.score_container {
+  right: 13.5vw;
+}
+  .score_container > h2 {
+    position: absolute;
+    left: 0.5vw;
+    top: -1vw;
+    
+    font-size: 1.5vw;
+  }
+
+.new_word > button{
+  width: 9.5vw;
+  height: 9.5vw;
+  font-size: 2vw;
+}
+
+.success_container {
+  border: 0.3vw solid black;
+
+  position: absolute;
+  right: 3vw;
+  top: 31.5vw;
+
+  width: 20vw;
+  height: 3.5vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
