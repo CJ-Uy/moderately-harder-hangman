@@ -21,6 +21,7 @@ body {
   height: 18.75vw;
 }
   .wrong_guesses_container > h2 {
+    font-size: 1.75vw;
     margin-top: 1vw;
     margin-left: 1vw;
   }
@@ -136,6 +137,13 @@ input:focus{
     top: -1vw;
     
     font-size: 1.5vw;
+  }
+
+  #player_score {
+    text-align: center;
+    font-size: 3vw;
+    font-weight: bold;
+
   }
 
 .new_word > button{
