@@ -10,7 +10,7 @@ body {
   font-size: 3vw;
 }
 
-.used_letters_container {
+.wrong_guesses_container {
   border: 0.3vw solid black;
 
   position: absolute;
@@ -20,6 +20,17 @@ body {
   width: 20vw;
   height: 18.75vw;
 }
+  .wrong_guesses_container > h2 {
+    margin-top: 1vw;
+    margin-left: 1vw;
+  }
+  #wrong_guesses {
+    word-break: break-word;
+    margin-left: 2vw;
+    letter-spacing: 1vw;
+    text-align: center;
+    font-size: 1.5vw;
+  }
 
 .hang_stand {
   border: 0.3vw solid black;
@@ -33,10 +44,18 @@ body {
   width: 45vw;
   height: 25vw;
 }
+  #current_word {
+    margin-top: 18vw;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 1vw;
+    font-size: 4vw;
+    letter-spacing: 0.75vw;
+  }
 
 .guess_container {
   position: absolute;
-  bottom: 8vw;
+  top: 37vw;
 
   display: flex;
   align-items: center;
@@ -63,7 +82,7 @@ input:focus{
 
 .confirm_button {
   position: absolute;
-  bottom: 4vw;
+  top: 41vw;
 
   display: flex;
   align-items: center;
@@ -139,8 +158,3 @@ input:focus{
   justify-content: center;
   align-items: center;
 }
-
-
-
-
-
