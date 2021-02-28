@@ -109,7 +109,7 @@ async function check() {
   }
 
   } else {
-    alert("This is hangman please only input letters");
+    alert("Choose your charcter wisely! You did not choose the right character (that wasn't a letter)");
     document.getElementById("player_guess").value = '';
   }
 }
