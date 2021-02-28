@@ -45,6 +45,17 @@ body {
   width: 45vw;
   height: 25vw;
 }
+  .hang_stand > img {
+    position: absolute;
+    height: 20vw;
+    top: -1vw;
+
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
   #current_word {
     margin-top: 18vw;
     margin-left: auto;
