@@ -86,11 +86,11 @@ async function check() {
   //Checking for a win or lose game state
   if (score == 0){
     alert("YOU HAVE LOST! The word was " + chosen_word);
-    document.location.reload(true);
+    window.location.reload();
   }
   if (current_word.indexOf('_') < 0){
-    alert("History is written by its victors (Congrats you won)");
-    document.location.reload(true);
+    alert("History is written by its victors (Congrats you won) \nYour final score is :" + score);
+    window.location.reload();
   }
 
   } else {
