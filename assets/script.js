@@ -95,6 +95,7 @@ async function check() {
 
   } else {
     alert("This is hangman please only input letters");
+    document.getElementById("player_guess").value = '';
   }
 }
 
