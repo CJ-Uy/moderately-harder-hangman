@@ -99,7 +99,7 @@ async function check() {
   }
   //Checking for lose game state
   if (score == 0){
-    alert("YOU HAVE LOST! The word was " + chosen_word);
+    alert("If at first you don't succeed,: Try, try, try again (You Lost) \nThe word was " + chosen_word);
     window.location.reload();
   }
   //Checking for win game state
