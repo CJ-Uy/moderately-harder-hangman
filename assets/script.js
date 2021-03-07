@@ -147,5 +147,4 @@ function hangman_image_source(x){
     document.getElementById("hangman_state").src = "./assets/hangman_images/hangman_15.png";
   }
 }
-
 main();
