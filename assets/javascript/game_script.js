@@ -27,7 +27,7 @@ async function main() {
   
   chosen_word = api_return.word;
 
-  if(chosen_word.length > 12) {
+  if(chosen_word.length > 12 || chosen_word.length <= 4) {
     main();
   } else{
     chosen_word = chosen_word.toLowerCase();
@@ -116,35 +116,35 @@ async function check() {
 
 function hangman_image_source(x){
   if (x == 0){
-    document.getElementById("hangman_state").src = "./assets/hangman_images/hangman_1.png";
+    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_1.png";
   } else if (x == 1){
-    document.getElementById("hangman_state").src = "./assets/hangman_images/hangman_2.png";
+    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_2.png";
   } else if (x == 2){
-    document.getElementById("hangman_state").src = "./assets/hangman_images/hangman_3.png";
-  } else if (x == 3){
-    document.getElementById("hangman_state").src = "./assets/hangman_images/hangman_4.png";
+    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_3.png";
+  } else if (x==3){
+    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_4.png";
   } else if (x == 4){
-    document.getElementById("hangman_state").src = "./assets/hangman_images/hangman_5.png";
+    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_5.png";
   } else if (x == 5){
-    document.getElementById("hangman_state").src = "./assets/hangman_images/hangman_6.png";
+    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_6.png";
   } else if (x == 6){
-    document.getElementById("hangman_state").src = "./assets/hangman_images/hangman_7.png";
+    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_7.png";
   } else if (x == 7){
-    document.getElementById("hangman_state").src = "./assets/hangman_images/hangman_8.png";
+    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_8.png";
   } else if (x == 8){
-    document.getElementById("hangman_state").src = "./assets/hangman_images/hangman_9.png";
+    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_9.png";
   } else if (x == 9){
-    document.getElementById("hangman_state").src = "./assets/hangman_images/hangman_10.png";
+    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_10.png";
   } else if (x == 10){
-    document.getElementById("hangman_state").src = "./assets/hangman_images/hangman_11.png";
+    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_11.png";
   } else if (x == 11){
-    document.getElementById("hangman_state").src = "./assets/hangman_images/hangman_12.png";
+    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_12.png";
   } else if (x == 12){
-    document.getElementById("hangman_state").src = "./assets/hangman_images/hangman_13.png";
+    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_13.png";
   } else if (x == 13){
-    document.getElementById("hangman_state").src = "./assets/hangman_images/hangman_14.png";
+    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_14.png";
   } else if (x == 14){
-    document.getElementById("hangman_state").src = "./assets/hangman_images/hangman_15.png";
+    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_15.png";
   }
 }
 main();

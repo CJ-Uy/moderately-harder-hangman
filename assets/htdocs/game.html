@@ -5,20 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="shortcut icon" type="image/jpg" href="/assets/images/hangman_logo.png"/>
+  <link rel="stylesheet" href="/assets/css/game_style.css">
 
-  <title>MHH</title>
+  <title>MHH - Game</title>
 </head>
 <body>
-  <h1 class="game_title">MODERATELY HARDER HANGMAN</h1>  
-
+  <header>
+    <h1 id="game_title">MODERATELY HARDER HANGMAN</h1>
+  </header>
   <div class="wrong_guesses_container">
     <h2>Wrong guesses: </h2>
     <h3 id="wrong_guesses"></h3>
   </div>
 
   <div class="hang_stand">
-    <img id="hangman_state" src="assets/hangman_images/hangman_15.png" alt="Hangman Image">
+    <img id="hangman_state" src="/assets/images/hangman_images/hangman_15.png" alt="Hangman Image">
     <h2 id="current_word"></h2>
   </div>
 
@@ -46,6 +48,6 @@
 
   </div>
 
-  <script src="assets/script.js"></script>
+  <script src="/assets/javascript/game_script.js"></script>
 </body>
 </html>
