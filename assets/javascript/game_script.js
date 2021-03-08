@@ -11,6 +11,8 @@ var num_wrong_guess = 0;
 
 var score = 15;
 
+var revealed = new Array(0);
+
 const api_url = 'https://random-words-api.vercel.app/word';
 //link to where I found the API: https://dev.to/mcnaveen/i-made-an-free-api-to-get-random-words-with-pronunciation-127o 
 
@@ -48,6 +50,7 @@ async function main() {
     console.log("The chosen word for this game is: " + chosen_word);
   }
 }
+
 
 //Function to check the user's input procceed accordingly
 async function check() {
@@ -114,6 +117,7 @@ async function check() {
   }
 }
 
+//Function to change state of hangman depending on number of guesses
 function hangman_image_source(x){
   if (x == 0){
     document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_1.png";
@@ -147,4 +151,68 @@ function hangman_image_source(x){
     document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_15.png";
   }
 }
+
+
+
 main();
+
+
+
+//Functions for game lifelines
+function reveal() {
+  //computation for score subtraction per reveal
+  //make own version going forward checker
+  let num_ul = 1;
+    
+  for (i = 1; i < chosen_word.length; i++){
+    
+    is_unique = 1;
+
+    for (j = 0; j < i; j++){  
+      if (chosen_word[i] == chosen_word[j]) 
+        is_unique = 0;
+    }
+
+    if (is_unique == 1)
+      num_ul++;
+  }
+
+  alert(num_ul + "\n" + chosen_word);
+
+
+  //actual reveal
+  let li = Math.floor(Math.random()*chosen_word.length);
+
+  guess = chosen_word[li];
+
+  if(revealed.indexOf(guess) >= 0){
+    reveal();
+  }
+
+  //Loop to check if guess is correct
+  for(i = 0; i < chosen_word.length; i++){
+    if(guess == chosen_word[i]){
+      current_word[i] = chosen_word[i]
+      revealed.push(guess);
+    } 
+    document.getElementById("current_word").innerHTML = current_word.join('');
+  }
+}
+
+function gambler() {
+  let your_fate = Math.floor(Math.random()*10);
+  
+  if(your_fate <= 5){
+    score--;
+    document.getElementById("player_score").innerHTML = score;
+
+    if(score==0){
+      alert("If at first you don't succeed,: Try, try, try again (You Lost) \nThe word was " + chosen_word);
+      window.location.reload();
+    }
+
+  } else {
+    score++;
+    document.getElementById("player_score").innerHTML = score;
+  }
+}

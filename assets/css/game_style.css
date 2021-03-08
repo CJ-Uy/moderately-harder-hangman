@@ -94,6 +94,8 @@ header {
 }
 
 input{
+  cursor: text;
+
   width: 15vw;
   height: 3vw;
 
@@ -113,6 +115,8 @@ input:focus{
 .confirm_button {
   position: absolute;
   top: 41vw;
+
+  cursor: pointer;
 
   display: flex;
   align-items: center;
@@ -178,24 +182,43 @@ input:focus{
   width: 9.5vw;
   height: 9.5vw;
   font-size: 2vw;
-  background-color: lightblue;
+
+  cursor: pointer;
+
+  background-color: skyblue;
 }
 .new_word > button:hover {
   background-color: lightgrey;
-  color: rgb(83, 83, 83);
+  color: darkblue;
 }
 
-.success_container {
+.lifeline_reveal, .lifeline_gambler {
   border: 0.3vw solid #20202b;
+  background-color: lightgrey;
+
+  cursor: pointer;
 
   position: absolute;
-  right: 3vw;
+  right: 13.5vw;
   top: 31.5vw;
 
-  width: 20vw;
+  width: 9.5vw;
   height: 3.5vw;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.lifeline_reveal > img {
+  height: 3.5vw;
+}
+
+.lifeline_gambler > img {
+  margin-top: 0.5vw;
+  height: 5vw;
+}
+
+.lifeline_gambler {
+  right: 3vw;
 }
