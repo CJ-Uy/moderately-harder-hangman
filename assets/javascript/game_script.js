@@ -156,40 +156,52 @@ function hangman_image_source(x){
 
 main();
 
-
-
-//Functions for game lifelines
-function reveal() {
-  //computation for score subtraction per reveal
-  //make own version going forward checker
-  let num_ul = 1;
-    
-  for (i = 1; i < chosen_word.length; i++){
-    
-    is_unique = 1;
-
-    for (j = 0; j < i; j++){  
-      if (chosen_word[i] == chosen_word[j]) 
-        is_unique = 0;
-    }
-
-    if (is_unique == 1)
-      num_ul++;
-  }
-
-  alert(num_ul + "\n" + chosen_word);
-
-
-  //actual reveal
+function random_letter_from_word() {
   let li = Math.floor(Math.random()*chosen_word.length);
 
   guess = chosen_word[li];
 
   if(revealed.indexOf(guess) >= 0){
-    reveal();
+    random_letter_from_word();
+  }
+}
+
+//Functions for game lifelines
+function reveal() {
+
+  //Picking random letter from the chosen word
+  random_letter_from_word();
+
+  //Finding the number of unique letters
+  let num_ul = 1;
+
+  for (i = 0; i < chosen_word.length-1; i++){
+    is_unique = 1;
+
+    for (j = i+1; j < chosen_word.length+1; j++){  
+      if (chosen_word[i] == chosen_word[j]) 
+        is_unique = 0;
+    }
+    if (is_unique == 1)
+      num_ul++;
   }
 
-  //Loop to check if guess is correct
+  //Show current score after deduction
+  const deduction = Math.ceil(15/num_ul);
+  
+  //Fail case to not kill yourself in game
+  if(score <= deduction){
+    alert("Choose your battles wisely (You do not have enough score to use this lifeline)");
+    return;
+  }
+  score -= deduction;
+  document.getElementById("player_score").innerHTML = score;
+
+  //Change image of Hangman depending on wrong
+  num_wrong_guess += deduction;
+  hangman_image_source(num_wrong_guess);
+
+  //Loop to show current word
   for(i = 0; i < chosen_word.length; i++){
     if(guess == chosen_word[i]){
       current_word[i] = chosen_word[i]
@@ -205,6 +217,10 @@ function gambler() {
   if(your_fate <= 5){
     score--;
     document.getElementById("player_score").innerHTML = score;
+
+    //Change image of Hangman depending on wrong
+    num_wrong_guess += 1;
+    hangman_image_source(num_wrong_guess);
 
     if(score==0){
       alert("If at first you don't succeed,: Try, try, try again (You Lost) \nThe word was " + chosen_word);
