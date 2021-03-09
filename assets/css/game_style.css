@@ -1,11 +1,11 @@
 @font-face {
   font-family: Marker;
-  src: url(/assets/fonts/Permanent_marker.ttf);
+  src: url(../fonts/Permanent_marker.ttf);
 }
 
 @font-face {
   font-family: Saucer;
-  src: url(/assets/fonts/SaucerBB.ttf);
+  src: url(../fonts/SaucerBB.ttf);
 }
 
 body {
