@@ -43,20 +43,39 @@ footer {
   align-items: center;
 }
 
-footer > button {
+#home_hangman {
+  position: fixed;
+  width: 18vw;
+  left: 33.85vw;
+  bottom: -9vw;
+  z-index: 1;
+}
+
+#start_button {
   font-size: 2vw;
   border-radius: 1vw;
   border: 2px solid lightgrey;
+  z-index: 99;
 }
-  footer > button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  }
 
 #rope {
   position: fixed;
-  top: -12vw;
+  top: -63.5vw;
   left: 38vw;
   width: 10vw;
+}
+
+/*Add animation for rope going down*/
+@keyframes rope_down {
+  0% {transform: translateY(0vw);}
+  50% {transform: translateY(30vw);}
+  100% {transform: translateY(-50vw);}
+}
+
+@keyframes body_up {
+  0% {transform: translateY(0vw);}
+  50% {transform: translateY(0vw);}
+  100% {transform: translateY(-80vw);}
 }
 
 html { /* body won't work ¯\_(ツ)_/¯ */
@@ -64,7 +83,7 @@ html { /* body won't work ¯\_(ツ)_/¯ */
 }
 
 section {
-  height: 100vh;
+  height: 48vw;
   width: 90vw;
   scroll-snap-align: start;
 }
@@ -98,7 +117,7 @@ section {
 
 .about {
   position: absolute;
-  top: 55vw;
+  top: 54vw;
   left: 33.5vw;
   font-size: 3vw;
   font-family: Marker;
@@ -111,12 +130,12 @@ section {
   }
   .about_s {
     position: absolute;
-    top: 67vw;
+    top: 65vw;
   }
 
 .how_to {
   position: absolute;
-  top: 103.5vw;
+  top: 102vw;
   left: 36.5vw;
   font-size: 3vw;
   font-family: Marker;
@@ -135,4 +154,21 @@ section {
     position: absolute;
     top: 0vw;
     left: 27vw;
+  }
+  .how_to_s {
+    top: 113vw;
+  }
+
+.con {
+  position: absolute;
+  top: 149vw;
+  left: 36.5vw;
+  font-size: 3vw;
+  font-family: Marker;
+}
+  #con2 {
+    position: absolute;
+    top: 0vw;
+    left: 10vw;
+    letter-spacing: 0.2vw;
   }

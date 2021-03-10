@@ -258,7 +258,6 @@ function gambler() {
   }
 }
 
-
 //Function to click the confirm button when pressing enter
 var input = document.getElementById("player_guess");
 input.addEventListener("keyup", function(event) {

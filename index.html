@@ -54,12 +54,15 @@
     </div>
     <div class = "about_s section_content">
       <p>
-        Moderately Harder Hangman adds a little twist to the your everyday hangman. This twist is simply its increase difficulty.
+        Moderately Harder Hangman adds a little twist to the your everyday hangman. This twist is simply its increase diffculty. 
+        <br>
+        <br>
         Sometimes you can already lose in regular hangman even if you knew the word, so what would happen if you didnt't.
+        This is exactly why I have also added features such as the reveal and gambler lifelines which you can use as much as you can.
+        The definition of the word is also shown on the upper right of the game screen incase you also might want Google's help. 
         <br>
         <br>
-        The game uses an API to get unconventional words from the internet. Hints are shown in the form of its definition
-        on the upper right box in the game.   
+        The game gets its unconventional words from a word API I had happened to have come across.
       </p>
     </div>
   </section>
@@ -71,12 +74,37 @@
       <h1 id="how_to3">TO</h1>
       <h1 id="how_to4">PLAY</h1>
     </div>
+    <div class = "how_to_s section_content">
+      <p>
+        This basics of this game has not changed! You enter your own guess in the input box then simply
+        click the confirm button or click the enter key. The program will then check if your guess is correct or wrong.
+        Every wrong answer bring the man closer to his hanging. If you finish guessing the word before the man is hanged
+        YOU WIN!
+        <br>
+        <br>
+        You start of with a score of 15.
+        <br>
+        However, every wrong guess subtracts it by 1 and reaching 0 is also a game over! In other words you have a
+        toal of 15 guesses.
+        <br>
+        <br>
+        Keep scrolling down to see info about the game lifeline.
+      </p>
+    </div>
   </section>
-  
+
+  <section>
+    <div class="con">
+      <h1 id="con1">C</h1>
+      <h1 id="con2">NTINUATION</h1>
+    </div>
+  </section>
 
   <footer>
-    <button onclick="start_game()">START</button> 
+    <img id="home_hangman" src="assets/images/home_hangman_cut.png">
+    <button id="start_button" onclick="start_game()">START</button> 
   </footer>
+
   
   <script src="assets/javascript/index.js"></script>
 </body>
