@@ -103,27 +103,39 @@ input{
   border-radius: 1vw;
   
   text-align: center;
-  transition: 0.3s;
+  transition: 0.25s ease-in-out;
 
   font-size: 1.5vw;
 }
-input:focus{
-  border-color: dodgerblue;
-  box-shadow: 0 0 0.25vw 0 dodgerblue;
-}
+  input:focus{
+    outline: none;
+    border-color: dodgerblue;
+    box-shadow: 0 0 0.25vw 0 dodgerblue;
+    width: 5vw;
+  }
 
-.confirm_button {
+#confirm_button {
   position: absolute;
   top: 41vw;
 
   cursor: pointer;
 
-  display: flex;
-  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+
+  background-color: lightgrey;
+  outline: none;
+  padding: 0.25vw 1vw;
 
   font-size: 1.5vw;
-  border-radius: 0.5vw;
+  border: 0.175vw solid #20202b;
+  border-radius: 0.75vw;
 }
+  #confirm_button:hover {
+    background-color: rgb(165, 163, 163);
+    outline: none;
+  }
 
 .definition_container {
   border: 0.3vw solid #20202b;
@@ -185,11 +197,10 @@ input:focus{
 
   cursor: pointer;
 
-  background-color: skyblue;
+  background-color: lightblue;
 }
 .new_word > button:hover {
-  background-color: lightgrey;
-  color: darkblue;
+  background-color: skyblue;
 }
 
 .lifeline_reveal, .lifeline_gambler {
@@ -209,6 +220,12 @@ input:focus{
   justify-content: center;
   align-items: center;
 }
+  .lifeline_reveal:hover, .lifeline_gambler:hover {
+    background-color: darkgrey;
+  }
+  .lifeline_reveal:active, .lifeline_gambler:active {
+    background-color: white;
+  }
 
 .lifeline_reveal > img {
   height: 3.5vw;

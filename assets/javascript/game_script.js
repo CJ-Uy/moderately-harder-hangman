@@ -67,30 +67,30 @@ async function check() {
     //Loop to check if guess is correct
     for(i = 0; i < chosen_word.length; i++){
       if(guess == chosen_word[i]){
+        revealed.push(guess);
         check_result++;
+
         console.log("Player's guess found in " + chosen_word);
         current_word[i] = chosen_word[i]
-        console.log(current_word.join(''));
+        console.log("Game's current word is: " + current_word.join(''));
       } 
       document.getElementById("current_word").innerHTML = current_word.join('');
     }
 
     //When user guess is wrong
     if(check_result==0){
-      //Change image of Hangman depending on wrong
-      hangman_image_source(num_wrong_guess);
-
       num_wrong_guess++;
       score--;
       document.getElementById("player_score").innerHTML = score;
+
+      hangman_image_source();
 
       console.log(guess + " was not found in " + chosen_word);
 
       failed_guesses.push(guess);
 
       document.getElementById("wrong_guesses").innerHTML = failed_guesses.join('');
-      console.log(current_word.join(''));
-      console.log("Player has " + num_wrong_guess + "wrong guesses")
+      console.log("Game's current word is: " + current_word.join(''));
     }
     document.getElementById("player_guess").value = '';
     
@@ -112,50 +112,68 @@ async function check() {
   }
 
   } else {
-    alert("Choose your charcter wisely! You did not choose the right character (that wasn't a letter)");
+    alert("Choose your character wisely! You did not choose the right character (that wasn't a letter)");
     document.getElementById("player_guess").value = '';
   }
 }
 
 //Function to change state of hangman depending on number of guesses
-function hangman_image_source(x){
-  if (x == 0){
-    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_1.png";
-  } else if (x == 1){
-    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_2.png";
-  } else if (x == 2){
-    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_3.png";
-  } else if (x==3){
-    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_4.png";
-  } else if (x == 4){
-    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_5.png";
-  } else if (x == 5){
-    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_6.png";
-  } else if (x == 6){
-    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_7.png";
-  } else if (x == 7){
-    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_8.png";
-  } else if (x == 8){
-    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_9.png";
-  } else if (x == 9){
-    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_10.png";
-  } else if (x == 10){
-    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_11.png";
-  } else if (x == 11){
-    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_12.png";
-  } else if (x == 12){
-    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_13.png";
-  } else if (x == 13){
-    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_14.png";
-  } else if (x == 14){
-    document.getElementById("hangman_state").src = "/assets/images/hangman_images/hangman_15.png";
+function hangman_image_source(){
+
+  switch (score) {
+    case 14: 
+      document.getElementById("hangman_state").src = "../images/hangman_images/hangman_1.png";
+      break;
+    case 13: 
+      document.getElementById("hangman_state").src = "../images/hangman_images/hangman_2.png";
+      break;
+    case 12: 
+      document.getElementById("hangman_state").src = "../images/hangman_images/hangman_3.png";
+      break;
+    case 11: 
+      document.getElementById("hangman_state").src = "../images/hangman_images/hangman_4.png";
+      break;
+    case 10:
+      document.getElementById("hangman_state").src = "../images/hangman_images/hangman_5.png";
+      break;
+    case 9:
+      document.getElementById("hangman_state").src = "../images/hangman_images/hangman_6.png";
+      break;
+    case 8: 
+      document.getElementById("hangman_state").src = "../images/hangman_images/hangman_7.png";
+      break;
+    case 7: 
+      document.getElementById("hangman_state").src = "../images/hangman_images/hangman_8.png";
+      break;
+    case 6:
+      document.getElementById("hangman_state").src = "../images/hangman_images/hangman_9.png";
+      break;
+    case 5: 
+      document.getElementById("hangman_state").src = "../images/hangman_images/hangman_10.png";
+      break;
+    case 4: 
+      document.getElementById("hangman_state").src = "../images/hangman_images/hangman_11.png";
+      break;
+    case 3:
+      document.getElementById("hangman_state").src = "../images/hangman_images/hangman_12.png";
+      break;
+    case 2:
+      document.getElementById("hangman_state").src = "../images/hangman_images/hangman_13.png";
+      break;
+    case 1:
+      document.getElementById("hangman_state").src = "../images/hangman_images/hangman_14.png";
+      break;
+    case 0:
+      document.getElementById("hangman_state").src = "../images/hangman_images/hangman_15.png";
+      break;
+    default:
+      document.getElementById("hangman_state").src = "";  
+      break;
   }
+
 }
 
-
-
-main();
-
+//function to pick a ranodm letter from the chosen word
 function random_letter_from_word() {
   let li = Math.floor(Math.random()*chosen_word.length);
 
@@ -199,7 +217,7 @@ function reveal() {
 
   //Change image of Hangman depending on wrong
   num_wrong_guess += deduction;
-  hangman_image_source(num_wrong_guess);
+  hangman_image_source();
 
   //Loop to show current word
   for(i = 0; i < chosen_word.length; i++){
@@ -208,6 +226,12 @@ function reveal() {
       revealed.push(guess);
     } 
     document.getElementById("current_word").innerHTML = current_word.join('');
+  }
+
+  //Checking for win game state
+  if (current_word.indexOf('_') < 0){
+    alert("History is written by its victors (Congrats you won)\nYour final score is :" + score);
+    window.location.reload();
   }
 }
 
@@ -219,8 +243,7 @@ function gambler() {
     document.getElementById("player_score").innerHTML = score;
 
     //Change image of Hangman depending on wrong
-    num_wrong_guess += 1;
-    hangman_image_source(num_wrong_guess);
+    hangman_image_source();
 
     if(score==0){
       alert("If at first you don't succeed,: Try, try, try again (You Lost) \nThe word was " + chosen_word);
@@ -229,6 +252,22 @@ function gambler() {
 
   } else {
     score++;
+    hangman_image_source();
+
     document.getElementById("player_score").innerHTML = score;
   }
 }
+
+
+//Function to click the confirm button when pressing enter
+var input = document.getElementById("player_guess");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("confirm_button").click();
+  }
+});
+
+
+
+main();

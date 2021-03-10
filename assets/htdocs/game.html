@@ -20,15 +20,16 @@
   </div>
 
   <div class="hang_stand">
-    <img id="hangman_state" src="../images/hangman_images/hangman_15.png" alt="Hangman Image">
+    <img id="hangman_state" src="../images/hangman_images/hangman_15.png">
     <h2 id="current_word"></h2>
   </div>
 
   <div class="guess_container">
-    <input autofocus name="guess" type="text" id="player_guess" placeholder="Your Letter Guess" maxlength="1">
+    <input autofocus name="guess" type="text" id="player_guess" maxlength="1" 
+    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Letter Guess'">
   </div>
 
-  <button class="confirm_button" onclick="check()">Confirm</button>
+  <button id="confirm_button" onclick="check()">Confirm</button>
 
   <div class="definition_container">
     <h2>Defintion: </h2>
