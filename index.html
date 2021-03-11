@@ -31,7 +31,7 @@
     </div>
     <div class = "welcome_s section_content">
       <p>
-        Welcome to MODERTELY HARDER HANGMAN! 
+        Welcome to MODERATELY HARDER HANGMAN! 
         <br>
         <br>
         As you can infer from the title of this game. This is hangman but moderately harder. So much so that there are
@@ -97,6 +97,37 @@
     <div class="con">
       <h1 id="con1">C</h1>
       <h1 id="con2">NTINUATION</h1>
+    </div>
+
+    <div class="lifelines_expl">
+      <div id="lifelines_intro">
+        <p>
+          Lifelines in this game are treated slightly differently. Unlike other games where lifelines can only be used once,
+          here you can use them as much as you CAN. I say can because at some point you may not have enough points to use them.
+        </p>
+      </div>
+      <div class="indepth_lifelines">
+
+          <img class="lifeline_icon" id="reveal_icon" src="assets/images/reveal_icon.png">
+          <p id="reveal_lifeline">
+            This is the REVEAL LIFELINE. Long story short, it subtracts some of your score to reveal a letter of the word.
+            The amount of point deducted depends on how many unique letter the word has. This is so the player cannot simply click
+            the Reveal Lifeline until the word is fully shown. 
+            <br>
+            The calculation to determinethe deduction of points is ⌈ 15 / # of unique letters ⌉
+          </p>
+
+
+          <img class="lifeline_icon" id="gambler_icon" src="assets/images/gambler_icon.png">
+          <p id="gambler_lifeline">
+            This is the GAMBLER LIFELINE. This lifeline when clicked simply gives you a chance to gain 1 point or lose 1 point.
+            <br>
+            <br>
+            This simple lifeline can be well paired with the Reveal Lifeline as you could use the Gambler to earn points to be used
+            for the reveal lifeline. You must be careful however or rather you must be lucky! 
+          </p>
+
+      </div>
     </div>
   </section>
 

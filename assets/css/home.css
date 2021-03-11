@@ -172,3 +172,45 @@ section {
     left: 10vw;
     letter-spacing: 0.2vw;
   }
+
+.lifelines_expl {
+  position: absolute;
+  top: 160vw;
+  font-size: 1vw;
+}
+#lifelines_intro {
+  text-align: center;
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+.lifeline_icon {
+  position: absolute;
+}
+  #reveal_icon {
+    position: absolute;
+    width: 6vw;
+    top: 5vw;
+    left: 30vw;
+  }
+  #gambler_icon {
+    position: absolute;
+    width: 9vw;
+    top: 3.5vw;
+    right: 27vw;
+  }
+
+.indepth_lifelines {
+  text-align: justify;
+}
+#reveal_lifeline {
+  position: absolute;
+  top: 11vw;
+  margin-left: 20vw;
+  margin-right: 54vw; 
+}
+#gambler_lifeline {
+  position: absolute;
+  top: 11vw;
+  margin-left: 54vw;
+  margin-right: 20vw;
+}
