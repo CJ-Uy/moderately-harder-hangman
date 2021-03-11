@@ -239,3 +239,101 @@ input{
 .lifeline_gambler {
   right: 3vw;
 }
+
+
+/*Link to button: https://codepen.io/bartekd/pen/qFsDf*/
+#return_home {
+  position: absolute;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  left: 8.5vw;
+  top: 27vw;
+}
+
+.button_base {
+  margin: 0;
+  border: 0;
+  font-size: 1.25vw;
+  width: 10vw;
+  height: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+.b08_3d_pushback {
+  perspective: 500px;
+  -webkit-perspective: 500px;
+  -moz-perspective: 500px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.b08_3d_pushback div {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  pointer-events: none;
+  padding: 10px;
+}
+
+.b08_3d_pushback div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #20202b;
+  background-color: #ffffff;
+  border: 0.25vw solid #20202b;
+  transform: rotateX(0deg) translateZ(0px);
+  -webkit-transform: rotateX(0deg) translateZ(0px);
+  -moz-transform: rotateX(0deg) translateZ(0px);
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+}
+
+.b08_3d_pushback div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #20202b;
+  transform: rotateX(-179.5deg) translateZ(1px);
+  -webkit-transform: rotateX(-179.5deg) translateZ(1px);
+  -moz-transform: rotateX(-179.5deg) translateZ(1px);
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+}
+
+.b08_3d_pushback:hover div:nth-child(1) {
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transform: rotateX(179.5deg);
+  -webkit-transform: rotateX(179.5deg);
+  -moz-transform: rotateX(179.5deg);
+}
+
+.b08_3d_pushback:hover div:nth-child(2) {
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transform: rotateX(0deg) rotateY(0deg) translateZ(1px);
+  -webkit-transform: rotateX(0deg) rotateY(0deg) translateZ(1px);
+  -moz-transform: rotateX(0deg) rotateY(0deg) translateZ(1px);
+}
