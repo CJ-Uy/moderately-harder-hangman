@@ -83,7 +83,7 @@ html { /* body won't work ¯\_(ツ)_/¯ */
 }
 
 section {
-  height: 48vw;
+  height: 47vw;
   width: 90vw;
   scroll-snap-align: start;
 }
@@ -117,7 +117,7 @@ section {
 
 .about {
   position: absolute;
-  top: 54vw;
+  top: 53vw;
   left: 33.5vw;
   font-size: 3vw;
   font-family: Marker;
@@ -130,12 +130,12 @@ section {
   }
   .about_s {
     position: absolute;
-    top: 65vw;
+    top: 64vw;
   }
 
 .how_to {
   position: absolute;
-  top: 102vw;
+  top: 100vw;
   left: 36.5vw;
   font-size: 3vw;
   font-family: Marker;
@@ -156,12 +156,12 @@ section {
     left: 27vw;
   }
   .how_to_s {
-    top: 113vw;
+    top: 111.25vw;
   }
 
 .con {
   position: absolute;
-  top: 149vw;
+  top: 145.5vw;
   left: 36.5vw;
   font-size: 3vw;
   font-family: Marker;
@@ -175,7 +175,7 @@ section {
 
 .lifelines_expl {
   position: absolute;
-  top: 160vw;
+  top: 156vw;
   font-size: 1vw;
 }
 #lifelines_intro {
