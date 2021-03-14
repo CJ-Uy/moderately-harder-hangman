@@ -97,26 +97,26 @@ async function check() {
   }
   //For case when wrong guess is repeated 
   else {
-    alert("The definition of insanity is doing the same thing over and over and expecting different results (You already tried that)");
+    repeated_guess_modal();
     document.getElementById("player_guess").value = '';
   }
   //Checking for lose game state
   if (score == 0){
     setTimeout(() => {
-      alert("If at first you don't succeed,: Try, try, try again (You Lost) \nThe word was " + chosen_word);
+      lose_modal(chosen_word);
       window.location.reload();
     }, 500);
   }
   //Checking for win game state
   if (current_word.indexOf('_') < 0){
     setTimeout(() => {
-      alert("History is written by its victors (Congrats you won)\nYour final score is :" + score); 
+       win_modal(score);
       window.location.reload(); 
     }, 500); 
   }
 
   } else {
-    alert("Choose your character wisely! You did not choose the right character (that wasn't a letter)");
+    invalid_char_modal();
     document.getElementById("player_guess").value = '';
   }
 }
@@ -220,7 +220,7 @@ function reveal() {
   
   //Fail case to not kill yourself in game
   if(score <= deduction){
-    alert("Choose your battles wisely (You do not have enough score to use this lifeline)");
+    no_lifeline_modal();
     return;
   }
   score -= deduction;
@@ -242,7 +242,7 @@ function reveal() {
   //Checking for win game state
   if (current_word.indexOf('_') < 0){
     setTimeout(() => {
-      alert("History is written by its victors (Congrats you won)\nYour final score is :" + score); 
+      win_modal(score);
       window.location.reload(); 
     }, 500); 
   }
@@ -259,7 +259,7 @@ function gambler() {
     hangman_image_source();
 
     if(score==0){
-      alert("If at first you don't succeed,: Try, try, try again (You Lost) \nThe word was " + chosen_word);
+      lose_modal(chosen_word);
       window.location.reload();
     }
 
@@ -274,6 +274,89 @@ function gambler() {
 
 
 //Functions for Modal Boxes
+function win_modal(score) {
+  var modal = document.getElementById("win_modal");
+  var span = document.getElementsByClassName("close")[0];
+
+  document.getElementById("win_dialog") = "FINAL SCORE: " + score;
+
+  modal.style.display = "block";
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+
+function lose_modal(cw){
+  var modal = document.getElementById("lose_modal");
+  var span = document.getElementsByClassName("close")[0];
+
+  document.getElementById("lose_dialog") = "GAME WORD: " + cw;
+
+  modal.style.display = "block";
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+
+function invalid_char_modal(){
+  var modal = document.getElementById("invalid_char_modal");
+  var span = document.getElementsByClassName("close");
+
+  modal.style.display = "block";
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+
+
+function repeated_guess_modal(){
+  var modal = document.getElementById("repeated_guess_modal");
+  var span = document.getElementsByClassName("close")[0];
+
+  modal.style.display = "block";
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+function no_lifeline_modal(){
+  var modal = document.getElementById("no_lifeline_modal");
+  var span = document.getElementsByClassName("close")[0];
+
+  modal.style.display = "block";
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
 
 
 

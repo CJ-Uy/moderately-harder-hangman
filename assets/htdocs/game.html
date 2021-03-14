@@ -70,6 +70,92 @@
   </div>
   </a>
 
+
+
+  <!--Modal Boxes for win or lose game states-->
+  
+  <!--Modal box for when player wins-->
+  <div class="modal" id="win_modal">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>YOU WON!</h2>
+      </div>
+      <div class="modal-body">
+        <p>History is written by its victors</p>
+      </div>
+      <div class="modal-footer">
+        <h3 id="win_dialog"></h3>
+      </div>
+    </div>
+  
+  </div>
+
+
+  <!--Modal box for when player loses-->
+  <div class="modal" id="lose_modal">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>YOU LOST!</h2>
+      </div>
+      <div class="modal-body">
+        <p>If at first you don't succeed,: Try, try, try again</p>
+      </div>
+      <div class="modal-footer">
+        <h3 id="lose_dialog"></h3>
+      </div>
+    </div>
+  
+  </div>
+
+  <!--Modal box for when player enters invalid charcater-->
+  <div class="modal" id="invalid_char_modal">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>That was not a letter</h2>
+      </div>
+      <div class="modal-body">
+        <p>Choose your character wisely! You did not choose the right character!</p>
+      </div>
+    </div>
+  
+  </div>
+
+  <!--Modal box for when player trys a previous wrong guess-->
+  <div class="modal" id="repeated_guess_modal">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="close">&times;</div>
+        <h2>You already tried that</h2>
+      </div>
+      <div class="modal-body">
+        <p>The definition of insanity is doing the same thing over and over and expecting different results</p>
+      </div>
+    </div>
+  
+  </div>
+
+  <!--Modal box for when player does not have enough points for a lifeline-->
+  <div class="modal" id="no_lifeline_modal">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Not enough points for a lifeline</h2>
+      </div>
+      <div class="modal-body">
+        <p>Choose your battles wisely</p>
+      </div>
+    </div>
+  
+  </div>
+
   <script src="../javascript/game_script.js"></script>
 </body>
 </html>
