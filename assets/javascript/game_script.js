@@ -121,7 +121,7 @@ async function check() {
   }
 }
 
-//Function to change state of hangman depending on number of guesses
+//Function to change state of hangman image
 function hangman_image_source(){
 
   switch (score) {
@@ -177,7 +177,14 @@ function hangman_image_source(){
 
 }
 
-//function to pick a ranodm letter from the chosen word
+
+
+
+
+//Startline for Game Lifelines code
+
+
+//Function to pick a ranodm letter from the chosen word
 function random_letter_from_word() {
   let li = Math.floor(Math.random()*chosen_word.length);
 
@@ -263,6 +270,12 @@ function gambler() {
     document.getElementById("player_score").innerHTML = score;
   }
 }
+
+
+
+//Functions for Modal Boxes
+
+
 
 //Function to click the confirm button when pressing enter
 var input = document.getElementById("player_guess");
