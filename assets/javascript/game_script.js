@@ -102,13 +102,17 @@ async function check() {
   }
   //Checking for lose game state
   if (score == 0){
-    alert("If at first you don't succeed,: Try, try, try again (You Lost) \nThe word was " + chosen_word);
-    window.location.reload();
+    setTimeout(() => {
+      alert("If at first you don't succeed,: Try, try, try again (You Lost) \nThe word was " + chosen_word);
+      window.location.reload();
+    }, 500);
   }
   //Checking for win game state
   if (current_word.indexOf('_') < 0){
-    alert("History is written by its victors (Congrats you won)\nYour final score is :" + score);
-    window.location.reload();
+    setTimeout(() => {
+      alert("History is written by its victors (Congrats you won)\nYour final score is :" + score); 
+      window.location.reload(); 
+    }, 500); 
   }
 
   } else {
@@ -230,8 +234,10 @@ function reveal() {
 
   //Checking for win game state
   if (current_word.indexOf('_') < 0){
-    alert("History is written by its victors (Congrats you won)\nYour final score is :" + score);
-    window.location.reload();
+    setTimeout(() => {
+      alert("History is written by its victors (Congrats you won)\nYour final score is :" + score); 
+      window.location.reload(); 
+    }, 500); 
   }
 }
 
