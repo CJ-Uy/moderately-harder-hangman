@@ -102,10 +102,7 @@ async function check() {
   }
   //Checking for lose game state
   if (score == 0){
-    setTimeout(() => {
-      lose_modal(chosen_word);
-      window.location.reload();
-    }, 500);
+    lose_modal(chosen_word);
   }
   //Checking for win game state
   if (current_word.indexOf('_') < 0){
@@ -275,16 +272,12 @@ function gambler() {
 
 //Functions for Modal Boxes
 function win_modal(score) {
-  var modal = document.getElementById("win_modal");
-  var span = document.getElementsByClassName("close")[0];
+  var modal = document.getElementById("win_modal").innerHTML;
 
-  document.getElementById("win_dialog") = "FINAL SCORE: " + score;
+  document.getElementById("win_dialog").innerHTML = "FINAL SCORE: " + score;
 
   modal.style.display = "block";
 
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
@@ -293,16 +286,12 @@ function win_modal(score) {
 }
 
 function lose_modal(cw){
-  var modal = document.getElementById("lose_modal");
-  var span = document.getElementsByClassName("close")[0];
+  var modal = document.getElementById("lose_modal").innerHTML;
 
-  document.getElementById("lose_dialog") = "GAME WORD: " + cw;
+  document.getElementById("lose_dialog").innerHTML = "GAME WORD: " + cw;
 
   modal.style.display = "block";
 
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
@@ -312,49 +301,34 @@ function lose_modal(cw){
 
 function invalid_char_modal(){
   var modal = document.getElementById("invalid_char_modal");
-  var span = document.getElementsByClassName("close");
 
   modal.style.display = "block";
 
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
   window.onclick = function(event) {
-    if (event.target == modal) {
+    if (event.target == modal) 
       modal.style.display = "none";
-    }
   }
 }
 
 
 function repeated_guess_modal(){
   var modal = document.getElementById("repeated_guess_modal");
-  var span = document.getElementsByClassName("close")[0];
 
   modal.style.display = "block";
 
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
   window.onclick = function(event) {
-    if (event.target == modal) {
+    if (event.target == modal) 
       modal.style.display = "none";
-    }
   }
 }
 function no_lifeline_modal(){
   var modal = document.getElementById("no_lifeline_modal");
-  var span = document.getElementsByClassName("close")[0];
 
   modal.style.display = "block";
 
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
   window.onclick = function(event) {
-    if (event.target == modal) {
+    if (event.target == modal)
       modal.style.display = "none";
-    }
   }
 }
 
