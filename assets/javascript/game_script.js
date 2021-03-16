@@ -249,9 +249,9 @@ function reveal() {
 }
 
 function gambler() {
-  let your_fate = Math.floor(Math.random()*10);
+  let your_fate = Math.floor(Math.random()*10)+1;
   
-  if(your_fate <= 5){
+  if(your_fate >= 5){
     score--;
     document.getElementById("player_score").innerHTML = score;
 
@@ -271,11 +271,8 @@ function gambler() {
   }
 }
 
-
-
 //Functions for Modal Boxes
-
-
+//I gave up on that
 
 //Function to click the confirm button when pressing enter
 var input = document.getElementById("player_guess");
