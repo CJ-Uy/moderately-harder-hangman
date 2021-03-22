@@ -179,8 +179,6 @@ function hangman_image_source(){
 
 
 
-
-
 //Startline for Game Lifelines code
 
 
