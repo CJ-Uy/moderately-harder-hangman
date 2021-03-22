@@ -289,9 +289,8 @@ input{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #20202b;
-  background-color: #ffffff;
-  border: 0.25vw solid #20202b;
+  color: #ffffff;
+  background-color: #20202b;
   transform: rotateX(0deg) translateZ(0px);
   -webkit-transform: rotateX(0deg) translateZ(0px);
   -moz-transform: rotateX(0deg) translateZ(0px);
@@ -307,8 +306,9 @@ input{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
-  background-color: #20202b;
+  color: #20202b;
+  background-color: #ffffff;
+  border: 0.25vw solid #20202b;
   transform: rotateX(-179.5deg) translateZ(1px);
   -webkit-transform: rotateX(-179.5deg) translateZ(1px);
   -moz-transform: rotateX(-179.5deg) translateZ(1px);
