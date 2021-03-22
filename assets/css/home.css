@@ -178,7 +178,7 @@ section {
 
 .con {
   position: absolute;
-  top: 145.5vw;
+  top: 147vw;
   left: 36.5vw;
   font-size: 3vw;
   font-family: Marker;
@@ -192,7 +192,7 @@ section {
 
 .lifelines_expl {
   position: absolute;
-  top: 156vw;
+  top: 157vw;
   font-size: 1vw;
 }
 #lifelines_intro {
@@ -230,4 +230,21 @@ section {
   top: 11vw;
   margin-left: 54vw;
   margin-right: 20vw;
+}
+
+#creds {
+  position: absolute;
+  top: 210vw;
+
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+
+  font-size: 1.5vw;
+  font-family: saucer;
 }
